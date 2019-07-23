@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>CEP Bootstrap</title>
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+	</head>
+	<body>
+		<h1>CEP Bootstrap</h1>
+		<div id="message"></div>
+		
+		<h2>CSInterface.js</h2>
+		<a href="#" onclick="csiOpenDoc('test.indd')">Open doc</a> |
+		<a href="#" onclick="csiEvalPrompt('CSInterface.js eval prompt','CSInterface.js eval prompt!')">CSInterface.js eval prompt</a> |
+
+		<h2>JSX.js</h2>
+		<a href="#" onclick="jsxOpenDoc('test.indd')">Open doc</a> |
+		<a href="#" onclick="jsxEvalPrompt('JSX.js eval prompt','JSX.js eval prompt!')">JSX.js eval prompt</a> |
+		<a href="#" onclick="jsxEvalPrompt('JSX.js file prompt','JSX.js file prompt!')">JSX.js file prompt</a> |
+		<a href="#" onclick="jsxController('Utility','withParams',{one: 1, two: 2}); alert(window.lastResult.one);">Params</a> |
+		<a href="#" onclick="jsxController('Utility','withParams',{one: 1, two: '2'},function(result){alert(JSON.parse(result).two);})">Params with callback</a> |
+
+		<h2>InDesign</h2>
+		<a href="#" onclick="jsxController('Utility','activeDocId')">Active Doc ID</a> |
+		<a href="#" onclick="jsxController('Utility','wordCount')">Active word count</a> |
+		<a href="#" onclick="jsxController('Utility','charCount')">Active character count</a> |
+
+
+		<!-- <h2>OSA.js</h2>
+		<a href="#" onclick="runOSA('host/views/prompt.jsx')">OSA prompt</a> |  -->
+
+		<h2>NPM package</h2>
+		<a href="#" onclick="openSite('https://www.jci.org')">Visit JCI</a> |
+
+		<h2>Miscellaneous</h2>
+		<a href="#" onclick="$('#message').text('test message')">Test Message</a> |
+		<a href="#" onclick="alert('client alert')">Client panel alert</a> | 
+		<a href="#" onclick="$('#message').text(prompt('client prompt','default value'))">Client panel alert</a> | 
+		<a href="#" onclick="alert(JSON.stringify(panelDetails(),null,2))">Details</a> | 
+		<!-- <a href="#" onclick="openSite(`http://localhost:${process.debugPort}`)">Debug site</a> |  -->
+
+		<!-- Insert this line above script imports -->
+		<script>if (typeof module === 'object') {window.module = module; module = undefined;}</script>
+		<script>if (typeof exports === 'object') {window.exports = exports; exports = undefined;}</script>
+		<!-- <script>if (typeof require === 'object') {window.require = require; require = undefined;}</script> -->
+
+		<script src="js/jquery-3.4.1.min.js"></script>
+		<script src="js/CSInterface.js"></script>
+		<script src="js/JSX.js"></script>
+		<script src="js/index.js"></script>
+		
+		<!-- Insert this line after script imports -->
+		<script>if (window.module) module = window.module;</script>
+		<script>if (window.exports) exports = window.exports;</script>
+		<!-- <script>if (window.require) require = window.require;</script> -->
+	</body>
+</html>

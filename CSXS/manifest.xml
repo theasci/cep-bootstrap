@@ -1,0 +1,46 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<ExtensionManifest ExtensionBundleId="org.jci.cep" ExtensionBundleVersion="0.0.1" Version="9.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<ExtensionList>
+		<Extension Id="com.example.cep.bootstrap" Version="0.0.1" />
+	</ExtensionList>
+	<ExecutionEnvironment>
+		<HostList>
+			<Host Name="IDSN" Version="[14.0.1,14.99]" />
+		</HostList>
+		<LocaleList>
+			<Locale Code="All" />
+		</LocaleList>
+		<RequiredRuntimeList>
+			<RequiredRuntime Name="CSXS" Version="9.0" />
+		</RequiredRuntimeList>
+	</ExecutionEnvironment>
+	<DispatchInfoList>
+		<Extension Id="com.example.cep.bootstrap">
+			<DispatchInfo>
+				<Resources>
+					<MainPath>./client/index.html</MainPath>
+					<!-- ScriptPath is required if you use evalScript() functionality -->
+					<ScriptPath>./host/index.jsx</ScriptPath>
+					<CEFCommandLine>
+						<Parameter>--enable-nodejs</Parameter>
+						<Parameter>--mixed-context</Parameter>
+					</CEFCommandLine>
+				</Resources>
+				<Lifecycle>
+					<AutoVisible>true</AutoVisible>
+				</Lifecycle>
+				<UI>
+					<Type>Panel</Type>
+					<Menu>CEP Bootstrap</Menu>
+					<Geometry>
+						<Size>
+							<Height>500</Height>
+							<Width>500</Width>
+						</Size>
+					</Geometry>
+					<Icons />
+				</UI>
+			</DispatchInfo>
+		</Extension>
+	</DispatchInfoList>
+</ExtensionManifest>

@@ -1,0 +1,8 @@
+<!-- https://github.com/Adobe-CEP/Getting-Started-guides/blob/master/Client-side%20Debugging/readme.md#set-the-debug-mode -->
+<ExtensionList>
+	<Extension Id="com.example.cep.bootstrap">
+		<HostList>
+			<Host Name="IDSN" Port="8080" />
+		</HostList>
+	</Extension>
+</ExtensionList>
