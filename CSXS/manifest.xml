@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<ExtensionManifest ExtensionBundleId="org.jci.cep" ExtensionBundleVersion="0.0.1" Version="9.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<ExtensionManifest ExtensionBundleId="com.example.cep" ExtensionBundleVersion="0.0.1" Version="9.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 	<ExtensionList>
 		<Extension Id="com.example.cep.bootstrap" Version="0.0.1" />
 	</ExtensionList>
